@@ -27,3 +27,9 @@ function addLetterGrade(data) {
         return { ...student, letter };
     });
 }
+
+console.log("1. Средний балл группы:", calculateAverage(grades));
+console.log("2. Лучший студент:", findTopStudent(grades));
+console.log("3. Список должников (балл < 60):", filterFailed(grades, 60));
+console.log("4. Итоговый массив с буквенными оценками:");
+console.log(addLetterGrade(grades));
