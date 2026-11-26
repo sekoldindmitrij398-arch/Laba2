@@ -14,3 +14,7 @@ function calculateAverage(data) {
 function findTopStudent(data) {
     return data.reduce((top, student) => student.score > top.score ? student : top, data[0]).name;
 }
+
+function filterFailed(data, passScore) {
+    return data.filter(student => student.score < passScore).map(student => student.name);
+}
